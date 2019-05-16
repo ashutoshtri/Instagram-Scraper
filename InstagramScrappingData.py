@@ -8,14 +8,16 @@ import importlib
 import string
 
 
-
-# import codecs
-
 username = ''
 username = sys.argv[1]
 print('Beginning to scrape- \n')
 os.system('python app.py '+ username + ' --media-metadata --latest-stamps TIMESTAMPS_' + username + ' --latest')
+print('Media Extracted Successfully \n')
+print('--------------------------------------------------')
 
+'''IF YOU ONLY NEED MEDIA AND NOT CAPTION THEN REMOVE THE FOLLOWING CODE'''
+
+'''Your downloaded location should be same and should be entered below as files will be exported to this location'''
 
 with open('/'<downloaded location>'/' + username + '/' + username + '.json') as f:
     r = json.load(f)
@@ -28,8 +30,7 @@ first = r['GraphImages']
 fileNames = []
 imageCaps = []
 
-print('Media Extracted Successfully \n')
-print('--------------------------------------------------')
+
 print('Extracting caption')
 
 
