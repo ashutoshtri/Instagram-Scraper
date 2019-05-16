@@ -2,7 +2,7 @@ import json
 import os
 import re
 import sys
-import pandas as pd
+import pandas as pd '''You need to install pandas by entering the following statement on terminal: pip install pandas --user'''
 import csv
 import importlib
 import string
